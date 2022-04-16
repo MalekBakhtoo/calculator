@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>calculator</title>
+        <link rel="stylesheet" href="calstyle.css">
+        <script type="text/javascript" src="behave.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("button").mouseover(function(){
+
+                $(this).addClass("mouseover");
+
+            }).mouseleave(function(){
+
+                $(this).removeClass("mouseover");
+                
+            });
+        });
+
+                
+        </script>
+    </head>
+    <body>
+        <center>
+            <article class="card">
+                <p class="card show">
+                    operation :
+                    <br><br><br>
+                    <span id="edu" style="font-size: xx-large;"></span>
+                </p>
+                <p class="card" >
+                    <button onclick="clr();">C</button><button class="opr">more</button><button class="opr">%</button><button class="opr" onclick="dis('/')">/</button>
+                    <br>
+                    <button onclick="dis('7')">7</button><button onclick="dis('8')">8</button><button onclick="dis('9')">9</button><button class="opr" onclick="dis('*')">*</button>
+                    <br>
+                    <button onclick="dis('4')">4</button><button onclick="dis('5')">5</button><button onclick="dis('6')">6</button><button class="opr" onclick="dis('+')">+</button>
+                    <br>
+                    <button onclick="dis('1')">1</button><button onclick="dis('2')">2</button><button onclick="dis('3')">3</button><button class="opr" onclick="dis('-')">-</button>
+                    <br>
+                    <button id="zerobut" onclick="dis('0')">0</button><button onclick="dis('.')"><b>.</b></button><button class="opr" onclick="solve()">=</button>
+                </p>
+            </article>
+        </center>
+    </body>
+</html>
